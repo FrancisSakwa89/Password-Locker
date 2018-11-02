@@ -66,5 +66,19 @@ class TestPassword(unittest.TestCase):
             self.assertEqual(len(Password.password_list),1)
 
 
+    def test_find_password_by_name(self):
+        '''
+        test to check if we can find a contact by first name and display information
+        '''
+
+        self.new_password.save_password()
+        test_password = Password("first_name","last_name","password_input") # new password
+        test_password.save_password()
+
+        found_password = Password.find_by_name("first_name")
+
+        self.assertEqual(found_password.password_input,test_password.password_input)
+
+
 if __name__ == '__main__':
     unittest.main()

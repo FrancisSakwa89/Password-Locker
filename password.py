@@ -30,5 +30,20 @@ class Password:
 
         Password.password_list.remove(self)
 
+    @classmethod
+    def find_by_name(cls,first_name):
+        '''
+        Method that takes in a name and returns a contact that matches that name.
+
+        Args:
+            name: first name to search for
+        Returns :
+            Password of person that matches the name.
+        '''
+
+        for password in cls.password_list:
+            if password.first_name == first_name:
+                return password
+    
 if __name__ == '__main__':
     unittest.main()    
