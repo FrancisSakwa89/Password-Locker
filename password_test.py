@@ -79,6 +79,19 @@ class TestPassword(unittest.TestCase):
 
         self.assertEqual(found_password.password_input,test_password.password_input)
 
+    def test_password_exists(self):
+        '''
+        test to check if we can return a Boolean  if we cannot find the password.
+        '''
+
+        self.new_password.save_password()
+        test_password = Password("first_name","last_name","password_input") # new password
+        test_password.save_password()
+
+        password_exists = Password.password_exist("password_input")
+
+        self.assertTrue(password_exists)
+    
 
 if __name__ == '__main__':
     unittest.main()
