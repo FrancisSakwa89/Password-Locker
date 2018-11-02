@@ -34,8 +34,37 @@ class TestPassword(unittest.TestCase):
         '''
         self.new_password.save_password() # saving the new contact
         self.assertEqual(len(Password.password_list),1)
-
     
+        # setup and class creation up here
+    def tearDown(self):
+            '''
+            tearDown method that does clean up after each test case has run.
+            '''
+            Password.password_list = []
+
+       # other test cases here
+    def test_save_multiple_password(self):
+            '''
+            test_save_multiple_password to check if we can save multiple password
+            objects to our password_list
+            '''
+            self.new_password.save_password()
+            test_password = Password("first_name","last_name","password_input") # new password
+            test_password.save_password()
+            self.assertEqual(len(Password.password_list),2)
+    
+        # More tests above
+    def test_delete_contact(self):
+            '''
+            test_delete_contact to test if we can remove a contact from our contact list
+            '''
+            self.new_contact.save_contact()
+            test_contact = Contact("Test","user","0712345678","test@user.com") # new contact
+            test_contact.save_contact()
+
+            self.new_contact.delete_contact()# Deleting a contact object
+            self.assertEqual(len(Contact.contact_list),1)
+
 
 if __name__ == '__main__':
     unittest.main()

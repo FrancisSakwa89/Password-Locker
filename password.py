@@ -21,16 +21,6 @@ class Password:
 
         Password.password_list.append(self)
 
-      # Items up here...
-
-    def test_save_multiple_password(self):
-        '''
-        test_save_multiple_passowrd to check if we can save multiple password objects to our password_list
-        '''
-        self.new_passowrd.save_passowrd()
-        test_password = Password("first_name","last_name","password_input") # new password
-        test_password.save_password()
-        self.assertEqual(len(Password.password_list),2)
-
+      
 if __name__ == '__main__':
     unittest.main()    
