@@ -67,5 +67,12 @@ class Password:
         '''
         return cls.password_list
 
+
+    @classmethod
+    def copy_email(cls,first_name):
+        password_found = Password.find_by_first_name(first_name)
+        pyperclip.copy(password_found.email)
+
+   
 if __name__ == '__main__':
     unittest.main()    
