@@ -21,6 +21,14 @@ class Password:
 
         Password.password_list.append(self)
 
-      
+    
+    def delete_password(self):
+
+        '''
+        delete_password method deletes a saved password from the password_list
+        '''
+
+        Password.password_list.remove(self)
+
 if __name__ == '__main__':
     unittest.main()    
