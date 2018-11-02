@@ -45,5 +45,27 @@ class Password:
             if password.first_name == first_name:
                 return password
     
+    @classmethod
+    def password_exist(cls,first_name):
+        '''
+        Method that checks if a password account exists from the password list.
+        Args:
+            name: First name to search if it exists
+        Returns :
+            Boolean: True or false depending if the password account exists
+        '''
+        for password in cls.password_list:
+            if password.first_name == first_name:
+                    return True
+
+        return False
+    
+    @classmethod
+    def display_passwords(cls):
+        '''
+        method that returns the password list
+        '''
+        return cls.password_list
+
 if __name__ == '__main__':
     unittest.main()    

@@ -88,10 +88,17 @@ class TestPassword(unittest.TestCase):
         test_password = Password("first_name","last_name","password_input") # new password
         test_password.save_password()
 
-        password_exists = Password.password_exist("password_input")
+        password_exists = Password.password_exist("first_name")
 
         self.assertTrue(password_exists)
     
+    def test_display_all_contacts(self):
+        '''
+        method that returns a list of all passwords saved
+        '''
+
+        self.assertEqual(Password.display_passwords(),Password.password_list)
+
 
 if __name__ == '__main__':
     unittest.main()
