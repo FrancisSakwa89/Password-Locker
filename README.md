@@ -17,21 +17,18 @@ As a user I would like:
 ## Specifications
 | Behaviour | Input | Output |
 | :---------------- | :---------------: | ------------------: |
-| Display guides for navigation | **In terminal: $./run.py** | Hello Welcome to your Pass Word Locker. What is your name? (once you enter your nname):Use these known short codes to operate : SU -> SIGN UP.  DA -> Display your account.  LN ->LOGIN.  ex ->exit Pass Word Locker. |
-| Display prompt for creating an account | **Enter: SU** | Enter account name, user name password and email .|
-| Display prompt for login in | **Enter: LN** | Enter your account password to login |
-| Once logged in | **You are now logged in to your  account** |  Use these short codes:CA -> Create new credential.DC -> Display your credentials list.  ex ->Log out your credentials account. |
-| Display prompt for creating a credential | **Enter: CA** | Create new credential, Credential name: and password |
-| Display a list of credentials | **Enter: DC** | Prints a list of saved credentials |
-| Log out account  | **Enter: ex** | You have logged out your  account |
+| Display guides for navigation | **In terminal: $./run.py** | Hello, Welcome to your Password account. What is your name? (once you enter your name):Use these known short codes to operate : cc -> create account.  dc -> Display your account.  fc ->Find password account.  ex ->exit Password Locker account. |
+| Display prompt for creating an account | **Enter: cc** | Enter first name, last name, password  .|
+| Display prompt for finding account | **Enter: fc** | Enter the name you want to serach for  |
+| **Enter: dc** | Prints a list of saved password account |
+| Log out account  | **Enter: ex** | Thanks for your time you have logged out of your account ,BYE! ....|
 
-* To completely interact with this application,you will need to sign up to have an account,then login to your account and work in there.
 
 ## SetUp / Installation Requirements
 ### Prerequisites
 * python3.6
 * Good internet connection
-*  For windows users:  GitBash
+* For windows users:  GitBash
 * For linux/ubuntu users : Git
 
 
@@ -58,5 +55,5 @@ As a user I would like:
 ### LICENSE
 [MIT License](https://choosealicense.com/licenses/mit/#)
 
- __Copyright (c) 2018 Francis Sakwa__
+ __Copyright (c) 2018 Francis Sakwa__|
 
