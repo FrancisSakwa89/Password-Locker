@@ -27,7 +27,7 @@ As a user I would like:
 
 ## SetUp / Installation Requirements
 ### Prerequisites
-* python3.6
+* python3.6/python3.5
 * Good internet connection
 * For windows users:  GitBash
 *  For windows users:  GitBash
