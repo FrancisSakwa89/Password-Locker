@@ -99,7 +99,16 @@ class TestPassword(unittest.TestCase):
         '''
 
         self.assertEqual(Password.display_passwords(),Password.password_list)
+    
+    def test_copy_password(self):
+        '''
+        Test to confirm that we are copying the email address from a found contact
+        '''
 
+        # self.new_password.save_password()
+        # Password.copy_password("password_input")
+
+        # self.assertEqual(self.new_password.password_input,pyperclip.paste())
 
 if __name__ == '__main__':
     unittest.main()

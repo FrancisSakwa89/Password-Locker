@@ -1,3 +1,5 @@
+import unittest # Importing the unittest module
+# import pyperclip
 class Password:
     """
     Class that generates new instances of passwords
@@ -68,11 +70,11 @@ class Password:
         return cls.password_list
 
 
-    @classmethod
-    def copy_email(cls,first_name):
-        password_found = Password.find_by_first_name(first_name)
-        pyperclip.copy(password_found.email)
-
+    # @classmethod
+    # def copy_password(cls,password_input):
+    #     password_found = Password.find_by_password(password_input)
+    #     pyperclip.copy(password_found.password)
+    
    
 if __name__ == '__main__':
     unittest.main()    
