@@ -103,7 +103,7 @@ def main():
                print(f"password.......{search_password._password_input}")
                print(f"First name.......{search_password.first_name}")
            else:
-               print("That details does not exist")
+               print("Those details does not seem to exist")
 
        elif short_code == "ex":
            print("Thanks for your time you have logged out of your acccount ,BYE! .......")
