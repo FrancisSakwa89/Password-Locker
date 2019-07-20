@@ -35,6 +35,16 @@ class TestPassword(unittest.TestCase):
         '''
         self.new_password.save_password() # saving the new contact
         self.assertEqual(len(Password.password_list),1)
+
+# DELETE
+
+    def test_delete_password(self):
+        '''
+        test_save_password test case to test if the password object is saved into
+         the passowrd list
+        '''
+        self.password.delete_password() # saving the new contact
+        self.assertEqual(len(Password.password_list),0)
     
         # setup and class creation up here
     def tearDown(self):

@@ -14,7 +14,7 @@ def save_password(password):
    '''
    password.save_password()
 
-def del_password(password):
+def delete_password(password):
    '''
    Function to delete a password
    '''
@@ -49,7 +49,7 @@ def main():
    print('\n')
 
    while True:
-       print("Use these short codes : cc - create a new account, dc - display accounts, fc -find an account, ex -exit the password acount list ")
+       print("Use these short codes : cc - create a new account,dl- delete password, dc - display accounts, fc -find an account, ex -exit the password acount list ")
 
        short_code = input().lower()
 
@@ -89,6 +89,32 @@ def main():
                print('\n')
                print("You dont seem to have any details in your account saved yet")
                print('\n')
+
+                #    // DELETE PASSWORD
+        
+       elif short_code == 'dl':
+           print("Enter the name,password you want to delete")
+
+           print("Delete Account")
+           print("-"*10)
+
+           print ("First name ....")
+           f_name = input()
+
+           print("Last name ...")
+           l_name = input()
+
+        #    print("Email ")
+        #    email = input()
+
+           print("Password")
+           password_input = input()
+
+
+           delete_password(password)
+           print ('\n')
+           print(f"Account {f_name} {l_name} {password_input} deleted !!!")
+           print ('\n')
 
        elif short_code == 'fc':
 
